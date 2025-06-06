@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trazos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./img/isologo_black.png" alt="Logo" class="logo">
+        </a>
+        <nav class="menu">
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
+            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Menú">☰</label>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                <li><a href="#obras" class="nav-link">Obras</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#contacto" class="nav-link btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-principal">
+        <img src="./img/fondo.webp" alt="fondo">
+        <div class="contenido">
+    <div class="fondo-section-texto">
+        <h1>VI feria de arte contemporánea TRAZOS</h1>
+        <p class="descripcion">Trazos es una feria que celebra el arte y el diseño contemporáneo, reuniendo las obras más destacadas del año 2024. Un espacio de encuentro, inspiración y exploración creativa, donde lo visual cobra vida y el talento de jóvenes diseñadores se exhibe con fuerza y sensibilidad.</p>
+    </div>
+</div>
+    </section>
+
+    <section id="obras" class="section-cards">
+        <h2 class="titulo">OBRAS DESTACADAS</h2>
+        <div class="contenido">
+            <!-- Primera tarjeta con imagen (visible en todas las resoluciones) -->
+            <article class="card">
+                <img src="./img/Obra_1.webp" alt="Obra 1">
+                <h3 class="titulo">Fuerza Interior</h3>
+                <p class="descripcion">Una explosión de color y movimiento que evoca la potencia de las emociones humanas. Esta pieza representa la energía latente que habita en nuestro interior y busca emerger.</p>
+                <a href="#" class="boton">Ver más</a>
+                <div class="etiqueta etiqueta-celeste">Destacada</div>
+            </article>
+
+            <!-- Segunda tarjeta con imagen (visible en todas las resoluciones) -->
+            <article class="card">
+                <img src="./img/Obra_2.webp" alt="Obra 2">
+                <h3 class="titulo">Horizonte en Fuga</h3>
+                <p class="descripcion">Inspirada en la transición entre el día y la noche, esta obra captura un instante efímero de calma y transformación. Un paisaje emocional más que físico.</p>
+                <a href="#" class="boton">Ver más</a>
+                <div class="etiqueta etiqueta-rosada">Destacada</div>
+            </article>
+
+            <!-- Tercera tarjeta con imagen (visible en todas las resoluciones) -->
+            <article class="card">
+                <img src="./img/Obra_3.webp" alt="Obra 3">
+                <h3 class="titulo">Equilibrio Abstracto</h3>
+                <p class="descripcion">Formas orgánicas y geometría suave se entrelazan en un diálogo visual que plantea preguntas sobre el orden, el caos y la armonía en la vida cotidiana.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+                <div class="etiqueta etiqueta-blanca">Destacada</div>
+            </article>
+
+            <!-- Cuarta tarjeta sin imagen en mobile, con imagen en tablet y desktop -->
+            <article class="card card-4">
+                <img src="./img/Obra_4.webp" alt="Obra 4" class="img-card4">
+                <h3 class="titulo">Marea Viva</h3>
+                <p class="descripcion">La inmensidad del océano cobra fuerza en esta obra que combina textura y color para representar el vaivén de la existencia, el fluir constante que nos atraviesa.</p>
+                <a href="#" class="boton">Ver más</a>
+            </article>
+
+            <!-- Quinta tarjeta solo visible en desktop -->
+            <article class="card card-5">
+                <img src="./img/Obra_5.webp" alt="Obra 5">
+                <h3 class="titulo">Dualidad</h3>
+                <p class="descripcion">Fuego y agua, opuestos complementarios. Esta obra plantea una tensión equilibrada entre fuerzas que parecen contradecirse pero que, juntas, encuentran belleza.</p>
+                <a href="#" class="boton">Ver más</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="galeria" class="section-galeria">
+        <!-- Mobile, Tablet y Desktop -->
+        <div class="galeria-1">
+            <!-- Cuadro gradiente -->
+            <div class="cuadro gradiente-1">
+                <div class="contenido"></div>
+            </div>
+            
+            <!-- Cuadro con texto en vertical -->
+            <div class="cuadro texto-vertical">
+                <div class="texto">
+                    <h2>Donde el diseño se encuentra con la emoción.</h2>
+                    <a href="#obras" class="boton">Obras</a>
+                </div>
+            </div>
+            <!-- Cuadro con imagen -->
+            <div class="cuadro imagen-1">
+                <img src="./img/Obra_6.webp" alt="Obra 6">
+            </div>
+        </div>
+        
+        <!-- Tablet y Desktop -->
+        <div class="galeria-2">
+            <!-- Cuadro con texto en horizontal -->
+            <div class="cuadro texto-horizontal">
+                <div class="texto">
+                    <h2>El arte como huella, el diseño como lenguaje.</h2>
+                    <p>En Trazos, las formas hablan, los colores vibran, y cada obra es un testimonio del tiempo que habitamos. Una invitación a detenernos y observar con otros ojos.</p>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="cuadros-desktop">
+                <!-- Cuadro gradiente --> 
+                <div class="cuadro gradiente-2">
+                    <div class="contenido"></div>
+                </div>
+
+                <!-- Cuadro con imagen -->
+                <div class="cuadro imagen-2">
+                    <img src="./img/Obra_7.webp" alt="Obra 7">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div id="contacto" class="contacto">
+            <form class="email" action="#" method="post">
+                <label>Contáctanos</label>
+                <input type="email" name="correo" placeholder="guuadaf18@gmail.com" required>
+                <button type="submit" class="boton link">Enviar</button>
+            </form>
+        </div>
+        <div class="redes-sociales">
+            <p>Redes sociales</p>
+            <div class="iconos-redes">
+                <a href="https://es-la.facebook.com/login/device-based/regular/login/" class="icono" target="_blank" rel="noopener"><img src="./img/iconos_contacto/Facebook_logo.png" alt="Facebook" /></a>
+                <a href="https://www.instagram.com/accounts/login/?source=auth_switcher&locale=es_ES" class="icono" target="_blank" rel="noopener"><img src="./img/iconos_contacto/instagram_logo.png" alt="Instagram" /></a>
+                <a href="https://x.com/i/flow/login" class="icono icono-Twitter" target="_blank" rel="noopener"><img src="./img/iconos_contacto/X_logo.png" alt="Twitter" /></a>
+                <a href="https://www.linkedin.com/checkpoint/rm/sign-in-another-account?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" class="icono" target="_blank" rel="noopener"><img src="./img/iconos_contacto/Linkedin_logo.png" alt="LinkedIn" /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

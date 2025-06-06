@@ -1,0 +1,844 @@
+/* Estilos generales - Mobile first */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-size: 16px;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.etiqueta {
+    position: absolute;
+    display: none;
+    padding: 5px 8px;
+    top: 30px;
+    right: 0px;
+    font-size: 1rem;
+}
+
+.etiqueta.etiqueta-celeste {
+    background-color: #559cad;
+    color: #fff;
+}
+
+.etiqueta.etiqueta-rosada {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.etiqueta.etiqueta-blanca {
+    background-color: #fff;
+    color: #000;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 4rem 1rem 1rem;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3a7a89;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.7rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 15;
+    position: relative;
+}
+
+/* Mostrar el menú cuando el checkbox está marcado */
+#menu-toggle-checkbox:checked ~ .nav-links {
+    display: flex;
+}
+
+/* Cambia el ícono a una X cuando el menú está abierto */
+#menu-toggle-checkbox:checked ~ .menu-toggle::before {
+    content: "\2715";
+    position: absolute;
+    right: 0;
+    top: -8px;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+#menu-toggle-checkbox:checked ~ .menu-toggle::after {
+    content: "";
+}
+
+/* Oculta el ícono original cuando el menú está abierto */
+#menu-toggle-checkbox:checked ~ .menu-toggle {
+    font-size: 0;
+}
+
+/* Seccion principal */
+.section-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f0f0f0;
+    position: relative;
+    padding-top: 72px;
+}
+
+.section-principal img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+.section-principal .contenido {
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.section-principal .contenido h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.fondo-section-texto {
+    background-color: rgba(249, 249, 249, 0.4);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+@media (min-width: 1024px) {
+    .fondo-section-texto {
+        padding: 2.5rem 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-principal .contenido {
+        padding: 4rem 4rem 4.5rem 4rem;
+        bottom: 0;
+    }
+}
+
+.section-principal .contenido h1 {
+    font-size: 1,4rem;
+    color: #1b1b1b;
+    text-align: left;
+}
+
+.section-principal .contenido p {
+    display: none;
+    margin-top: 1rem;
+    color: #1b1b1b;
+}
+
+/* Seccion cards */
+.section-cards {
+    padding: 2rem 1.5rem;
+}
+
+.section-cards .titulo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.section-cards .contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.section-cards .card {
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.section-cards .card img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.section-cards .card .titulo {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-cards .card .descripcion {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.section-cards .boton {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border: 1px solid #559cad;
+    border-radius: 15px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #3a7a89;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: fit-content;
+}
+
+.section-cards .card-5,
+.section-cards .card-4 .card-4 {
+    display: none;
+}
+
+.img-card4 {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .img-card4 {
+        display: block;
+    }
+}
+
+/* Seccion galeria */
+.section-galeria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+}
+
+.section-galeria .galeria-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.section-galeria .galeria-2,
+.section-galeria .galeria-2 .cuadros-desktop {
+    display: none;
+}
+
+.section-galeria .cuadro {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-galeria .cuadro.gradiente-1 .contenido {
+    background: radial-gradient(circle at center, #ffcba4, #ea5753);
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.section-galeria .cuadro.texto-vertical {
+    background-color: #d0d0d0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f0ecc7; 
+}
+
+.section-galeria .cuadro .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-galeria .cuadro .texto h2 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.section-galeria .cuadro .texto p {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.section-galeria .cuadro .boton {
+    display: inline-block;
+    padding: 0.3rem 1.5rem;
+    background-color: #559cad;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    margin: 0.5rem auto 0;
+    width: auto;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: fit-content;
+}
+
+.section-galeria .cuadro.imagen-1 img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer .contacto {
+    text-align: center;
+    background-color: #333;
+    padding: 2rem 1rem;
+    color: #f9f9f9;
+}
+
+footer .contacto .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer .contacto .email label {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+footer .contacto .email input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #559cad;
+    background-color: #fff;
+    color: #3a7a89;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+footer .contacto .email input::placeholder {
+    color: #999;
+}
+
+footer .contacto .email a {
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    background-color: #559cad;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #559cad;
+}
+
+footer .redes-sociales {
+    text-align: center;
+    background-color: #ddd;
+    padding: 1.5rem 1rem;
+    color: #000;
+}
+
+footer .redes-sociales .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+}
+
+footer .redes-sociales .iconos-redes .icono {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    transition: color 0.2s;
+}
+
+footer .redes-sociales .iconos-redes .icono img {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    display: block;
+}
+footer .redes-sociales .iconos-redes .icono-Twitter img {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    margin-top: 6px;
+}
+
+footer .redes-sociales .iconos-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+/* Tablet */
+@media (min-width: 768px) {
+    /* Header */
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        margin-bottom: 0;
+        width: auto;
+        text-align: left;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid #559cad;
+        width: auto;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .nav-link:hover {
+        background-color: #ddd;
+    }
+    
+    .btn-contacto {
+        background-color: #559cad;
+        color: #fff;
+    }
+    
+    .btn-contacto:hover {
+        background-color: #333;
+    }
+    
+    /* Seccion principal */
+
+    .section-principal .contenido {
+        padding: 2rem 3rem 2.5rem 3rem;
+        text-align: left;
+    }
+    
+    .section-principal .contenido h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-cards .contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Seccion cards */
+
+    .section-cards {
+        padding: 2rem 4rem;
+    }
+
+    .section-cards .card,
+    .section-cards .card .titulo,
+    .section-cards .card .descripcion {
+        text-align: left;
+    }
+    
+    .section-cards .boton {
+        margin: 0;
+    }
+    
+    .section-cards .card-4 img {
+        display: block;
+    }
+    
+    /* Seccion galeria */
+
+    .section-galeria .galeria-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "gradient-box content-box"
+            "image-box content-box";
+        gap: 0;
+    }
+    
+    .section-galeria .galeria-2 {
+        display: block;
+        margin-top: 0;
+    }
+
+    .section-galeria .galeria-2 .cuadros-desktop {
+        display: none;
+    }
+    
+    .section-galeria .cuadro.gradiente-1 {
+        grid-area: gradient-box;
+    }
+        
+    .section-galeria .cuadro.texto-vertical {
+        grid-area: content-box;
+        aspect-ratio: auto;
+        height: 100%;
+    }
+    
+    .section-galeria .cuadro.imagen-1 {
+        grid-area: image-box;
+    }
+    
+    .section-galeria .cuadro.texto-horizontal {
+        background-color: #adceec;
+        padding: 2rem;
+        aspect-ratio: 16 / 9;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        max-height: 400px;
+    }
+    
+    .section-galeria .cuadro.texto-horizontal .texto {
+        text-align: left;
+        align-items: flex-start;
+        padding: 1.5rem;
+        justify-content: flex-end;
+    }
+
+    .section-galeria .cuadro.texto-horizontal .texto h2 {
+        margin-bottom: 0.7rem;
+    }
+    
+    .section-galeria .cuadro .texto h2 {
+        font-size: 1.4rem;
+    }
+    
+    .section-galeria .cuadro .texto p {
+        font-size: 1.2rem;
+    }
+    
+    /* Footer */
+
+    footer .contacto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+    
+    footer .redes-sociales {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+    
+    footer .redes-sociales .iconos-redes {
+        justify-content: flex-end;
+    }
+    
+    footer .redes-sociales p {
+        padding: 0 1rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .etiqueta {
+        display: block;
+    }
+
+    /* Header */
+
+    header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.6rem;
+    }
+
+    /* Seccion principal */
+
+    .section-principal img {
+        max-height: 80vh;
+    }
+    
+    .section-principal .contenido {
+        padding: 4rem 4rem 4.5rem 4rem;
+    }
+    
+    .section-principal .contenido h1 {
+        font-size: 2.4rem;
+    }
+    
+    .section-principal .contenido p {
+        display: block;
+        font-size: 1rem;
+    }
+
+    /* Seccion cards */
+
+    .section-cards {
+        padding: 3rem 4rem;
+    }
+    
+    .section-cards .contenido {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .section-cards .contenido .card:nth-child(1) {
+        grid-column: 1 / 3;
+    }
+
+    .section-cards .contenido .card:nth-child(2) {
+        grid-column: 3 / 5;
+    }
+
+    .section-cards .contenido .card:nth-child(3) { 
+        grid-column: 5 / 7;
+    }
+
+    .section-cards .contenido .card:nth-child(4) {
+        grid-column: 2 / 4; grid-row: 2;
+    }
+
+    .section-cards .contenido .card:nth-child(5) {
+        grid-column: 4 / 6; grid-row: 2;
+    }
+    
+    .section-cards .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-cards .card-5,
+    .section-cards .card-4 img {
+        display: block;
+    }
+
+    /* Seccion galeria */
+
+    .section-galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin: 3rem 0;
+        padding: 0;
+    }
+    
+    .section-galeria .galeria-1 {
+        grid-column: 1;
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "gradient-box content-box"
+            "image-box content-box";
+    }
+    
+    .section-galeria .galeria-2 {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .section-galeria .galeria-2 .cuadros-desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-top: 0;
+        height: 50%;
+    }
+
+    .section-galeria .gradiente-2, .section-galeria .imagen-2 {
+        aspect-ratio: 1/1;
+        height: 100%;
+    }
+
+    .section-galeria .cuadro {
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-galeria .cuadro .texto {
+        padding: 2rem;
+    }
+
+    .section-galeria .cuadro .texto h2 {
+        margin-bottom: 0.8rem;
+    }
+    
+    .section-galeria .cuadro .texto p {
+        margin-bottom: 0.8rem;
+    }
+    
+    .section-galeria .cuadro .boton {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+    }
+    
+    .section-galeria .cuadro img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .section-galeria .cuadro.texto-horizontal {
+        height: 50%;
+        flex: 0 0 50%;
+        aspect-ratio: auto;
+        max-height: none;
+    }
+    
+    .section-galeria .cuadro.texto-horizontal {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .section-galeria .cuadro.texto-horizontal .texto {
+        padding: 1.5rem;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    .section-galeria .cuadro.texto-horizontal .texto h2 {
+        margin-bottom: 1rem;
+    }
+        
+    .section-galeria .cuadro.gradiente-2 .contenido {
+        background: radial-gradient(circle at center, #ffcba4, #ea5753);
+        aspect-ratio: 1/1;
+        width: 100%;
+        height: 100%;
+    }
+}
